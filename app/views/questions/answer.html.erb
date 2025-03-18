@@ -1,4 +1,16 @@
-<h1>Your Question:</h1>
-<p><%= @question %></p>
+<!--Response thing-->
+<div class="container mt-5">
+  <h1>Your Question</h1>
 
-<%= link_to "Ask a different question", ask_path %>
+<!--Shows your question-->
+  <div class="alert alert-info mt-3">
+    <p><strong>Question:</strong><%= @question %></p>
+    <p><strong>Coach's Response:</strong><%= @coach_response %></p>
+  </div>
+
+<!--link to another question-->
+  <div class="mt-4">
+    <%= link_to "Ask Another", ask_path, class: 'btn btn-secondary' %>
+  </div>
+
+</div>
